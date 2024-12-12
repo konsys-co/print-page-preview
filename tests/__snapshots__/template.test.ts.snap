@@ -1,0 +1,319 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Custom size page 1`] = `
+"
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Size Page</title>
+    <style>body { font-family: sans-serif; }</style>
+    <style>
+      :root {
+        --bleeding: 1cm;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0 auto;
+        padding: 0;
+        background: rgb(204, 204, 204);
+        display: flex;
+        flex-direction: column;
+      }
+      b {
+        font-weight: 600;
+      }
+      .page {
+        display: inline-block;
+        position: relative;
+        margin: 2em auto;
+        padding: var(--bleeding);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+        background: white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+        @page page-0 {
+          size: 200mm 300mm;
+          margin: 0;
+        }
+        .page-0 {
+          width: 200mm;
+          height: 300mm;
+        }
+        
+        @page page-1 {
+          size: 200mm 300mm;
+          margin: 0;
+        }
+        .page-1 {
+          width: 200mm;
+          height: 300mm;
+        }
+        
+        @page page-2 {
+          size: 200mm 300mm;
+          margin: 0;
+        }
+        .page-2 {
+          width: 200mm;
+          height: 300mm;
+        }
+        
+      @media screen {
+        .page::after {
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          width: calc(100% - var(--bleeding) * 2);
+          height: calc(100% - var(--bleeding) * 2);
+          margin: var(--bleeding);
+          outline: thin dashed rgba(0, 0, 0, 0.2);
+          pointer-events: none;
+          z-index: 9999;
+        }
+      }
+      @media print {
+        .page {
+          margin: 0;
+          overflow: hidden;
+        }
+        
+          .page-0 {
+            page: page-0;
+          }
+          
+          .page-1 {
+            page: page-1;
+          }
+          
+          .page-2 {
+            page: page-2;
+          }
+          
+      }
+      body { background-color: #f0f0f0; }
+    </style>
+  </head>
+  <body>
+    <div class="page page-0">Page 1</div><div class="page page-1">Page 2</div><div class="page page-2">Page 3</div>
+  </body>
+</html>
+    "
+`;
+
+exports[`Default A4 1`] = `
+"
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>No Title</title>
+    
+    <style>
+      :root {
+        --bleeding: 1cm;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0 auto;
+        padding: 0;
+        background: rgb(204, 204, 204);
+        display: flex;
+        flex-direction: column;
+      }
+      b {
+        font-weight: 600;
+      }
+      .page {
+        display: inline-block;
+        position: relative;
+        margin: 2em auto;
+        padding: var(--bleeding);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+        background: white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+        @page page-0 {
+          size: 210mm 297mm;
+          margin: 0;
+        }
+        .page-0 {
+          width: 210mm;
+          height: 297mm;
+        }
+        
+        @page page-1 {
+          size: 210mm 297mm;
+          margin: 0;
+        }
+        .page-1 {
+          width: 210mm;
+          height: 297mm;
+        }
+        
+        @page page-2 {
+          size: 210mm 297mm;
+          margin: 0;
+        }
+        .page-2 {
+          width: 210mm;
+          height: 297mm;
+        }
+        
+      @media screen {
+        .page::after {
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          width: calc(100% - var(--bleeding) * 2);
+          height: calc(100% - var(--bleeding) * 2);
+          margin: var(--bleeding);
+          outline: thin dashed rgba(0, 0, 0, 0.2);
+          pointer-events: none;
+          z-index: 9999;
+        }
+      }
+      @media print {
+        .page {
+          margin: 0;
+          overflow: hidden;
+        }
+        
+          .page-0 {
+            page: page-0;
+          }
+          
+          .page-1 {
+            page: page-1;
+          }
+          
+          .page-2 {
+            page: page-2;
+          }
+          
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="page page-0">Page 1</div><div class="page page-1">Page 2</div><div class="page page-2">Page 3</div>
+  </body>
+</html>
+    "
+`;
+
+exports[`Different cover page 1`] = `
+"
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Cover Page</title>
+    <style>body { font-family: sans-serif; }</style>
+    <style>
+      :root {
+        --bleeding: 1cm;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0 auto;
+        padding: 0;
+        background: rgb(204, 204, 204);
+        display: flex;
+        flex-direction: column;
+      }
+      b {
+        font-weight: 600;
+      }
+      .page {
+        display: inline-block;
+        position: relative;
+        margin: 2em auto;
+        padding: var(--bleeding);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+        background: white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+        @page page-0 {
+          size: 210mm 148mm;
+          margin: 0;
+        }
+        .page-0 {
+          width: 210mm;
+          height: 148mm;
+        }
+        
+        @page page-1 {
+          size: 148mm 210mm;
+          margin: 0;
+        }
+        .page-1 {
+          width: 148mm;
+          height: 210mm;
+        }
+        
+        @page page-2 {
+          size: 148mm 210mm;
+          margin: 0;
+        }
+        .page-2 {
+          width: 148mm;
+          height: 210mm;
+        }
+        
+      @media screen {
+        .page::after {
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          width: calc(100% - var(--bleeding) * 2);
+          height: calc(100% - var(--bleeding) * 2);
+          margin: var(--bleeding);
+          outline: thin dashed rgba(0, 0, 0, 0.2);
+          pointer-events: none;
+          z-index: 9999;
+        }
+      }
+      @media print {
+        .page {
+          margin: 0;
+          overflow: hidden;
+        }
+        
+          .page-0 {
+            page: page-0;
+          }
+          
+          .page-1 {
+            page: page-1;
+          }
+          
+          .page-2 {
+            page: page-2;
+          }
+          
+      }
+      body { background-color: #f0f0f0; }
+    </style>
+  </head>
+  <body>
+    <div class="page page-0">Cover Page</div><div class="page page-1">Page 1</div><div class="page page-2">Page 2</div>
+  </body>
+</html>
+    "
+`;
