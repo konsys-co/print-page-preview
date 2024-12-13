@@ -5,10 +5,10 @@ Template module to generate printable page in HTML.
 ## Usage
 
 ```ts
-import { PageTemplate } from "@konsys/print"
+import { PageTemplate } from "@konsys.co/print"
 const coverPageContent = "<h1>Cover Page</h1>"
 const pages = [
-  { content: coverPageContent, customConfig: { pageSize: 'A4' } }
+  { content: coverPageContent, customConfig: { pageSize: 'A4' } },
   { content: "Page 2" },
   { content: "Page 3" },
 ]
