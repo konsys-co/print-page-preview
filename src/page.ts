@@ -30,10 +30,10 @@ class PageTemplate {
   title: string
   heads: string
   styles: string
-
+  fontFamily: string
   constructor(
     pages: { content: string, customConfig?: PageConfig }[],
-    options: { title?: string, heads?: string, styles?: string } = {}
+    options: { title?: string, heads?: string, styles?: string, fontFamily?: string } = {}
   ) {
     this.pages = pages.map(page => {
       const { content, customConfig } = page
@@ -46,6 +46,7 @@ class PageTemplate {
     this.title = options.title || 'No Title'
     this.heads = options.heads || ''
     this.styles = options.styles || ''
+    this.fontFamily = options.fontFamily || 'Arial, Helvetica, sans-serif'
   }
 
   public generatePrintablePage(defaultConfig: PageConfig = { pageSize: 'A4' }) {
@@ -82,7 +83,7 @@ class PageTemplate {
         padding: var(--bleeding);
         box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
         background: white;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: ${this.fontFamily};
       }
       ${
         this.pages.map((page, i) => `
