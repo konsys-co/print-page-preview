@@ -31,9 +31,11 @@ class PageTemplate {
   heads: string
   styles: string
   fontFamily: string
+  enableAutoPrint: boolean
+
   constructor(
     pages: { content: string, customConfig?: PageConfig }[],
-    options: { title?: string, heads?: string, styles?: string, fontFamily?: string } = {}
+    options: { title?: string, heads?: string, styles?: string, fontFamily?: string, enableAutoPrint?: boolean } = {}
   ) {
     this.pages = pages.map(page => {
       const { content, customConfig } = page
@@ -47,6 +49,7 @@ class PageTemplate {
     this.heads = options.heads || ''
     this.styles = options.styles || ''
     this.fontFamily = options.fontFamily || 'Arial, Helvetica, sans-serif'
+    this.enableAutoPrint = options.enableAutoPrint || false
   }
 
   public generatePrintablePage(defaultConfig: PageConfig = { pageSize: 'A4' }) {
@@ -59,6 +62,11 @@ class PageTemplate {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${this.title}</title>
     ${this.heads}
+    ${this.enableAutoPrint ? `<script>
+        window.onload = function() {
+        window.print();
+      };
+    </script>` : ''}
     <style>
       :root {
         --bleeding: 1cm;
