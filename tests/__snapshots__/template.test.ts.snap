@@ -9,6 +9,7 @@ exports[`Custom size page 1`] = `
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom Size Page</title>
     <style>body { font-family: sans-serif; }</style>
+    
     <style>
       :root {
         --bleeding: 1cm;
@@ -114,6 +115,7 @@ exports[`Default A4 1`] = `
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>No Title</title>
+    
     
     <style>
       :root {
@@ -221,6 +223,7 @@ exports[`Different cover page 1`] = `
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom Cover Page</title>
     <style>body { font-family: sans-serif; }</style>
+    
     <style>
       :root {
         --bleeding: 1cm;
