@@ -1,6 +1,6 @@
 {
   "name": "@konsys.co/print",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Template to generate printable preview page html in variety size",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
